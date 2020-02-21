@@ -8,6 +8,7 @@
 
 import Foundation
 import KeychainSwift
+import Firebase
 
 
 class AuthorizationManager {
@@ -16,22 +17,26 @@ class AuthorizationManager {
     
     private let keychainManager = KeychainSwift()
     
-    private init() {}
+    private init() {
+        self.user = Auth.auth().currentUser
+    }
     
+    
+    var user: User?
     
     var isAuthorized: Bool {
-        get {
-            return keychainManager.getBool(Constants.kIsAuthorized) ?? false
-        } set {
-            keychainManager.set(newValue, forKey: Constants.kIsAuthorized)
+        return user != nil
+    }
+    
+    
+    func logout() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            pl("Error signing out: \(signOutError)")
         }
     }
     
 }
 
-
-extension AuthorizationManager {
-    struct Constants {
-        static let kIsAuthorized = "isAuthorizedKey"
-    }
-}

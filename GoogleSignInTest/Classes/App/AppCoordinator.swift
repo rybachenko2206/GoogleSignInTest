@@ -40,6 +40,11 @@ class AppCoordinator {
     
     private func showLogin() {
         let loginVc = LoginViewController.instantiate()
+        
+        loginVc.userDidSignIn = { [weak self] in
+            self?.showTabbar()
+        }
+        
         navigationController.setNavigationBarHidden(false, animated: false)
         navigationController.viewControllers = [loginVc]
     }
