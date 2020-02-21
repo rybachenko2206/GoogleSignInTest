@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0511669223FFF7DE0024B9B7 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0511669123FFF7DE0024B9B7 /* Login.storyboard */; };
+		0511669623FFF8780024B9B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511669523FFF8780024B9B7 /* LoginViewController.swift */; };
+		0511669823FFF8960024B9B7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511669723FFF8960024B9B7 /* LoginViewModel.swift */; };
 		05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2923FFD61900A6C28E /* AppDelegate.swift */; };
 		05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */; };
 		05CB8C2E23FFD61900A6C28E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2D23FFD61900A6C28E /* FirstViewController.swift */; };
@@ -20,9 +23,13 @@
 		05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5023FFE04A00A6C28E /* UIView+Layers.swift */; };
 		05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5123FFE04A00A6C28E /* UITableView+Methods.swift */; };
 		05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5423FFE08200A6C28E /* ReusableCell.swift */; };
+		05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0511669123FFF7DE0024B9B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		0511669523FFF8780024B9B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0511669723FFF8960024B9B7 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignInTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8C2923FFD61900A6C28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 		05CB8C5023FFE04A00A6C28E /* UIView+Layers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layers.swift"; sourceTree = "<group>"; };
 		05CB8C5123FFE04A00A6C28E /* UITableView+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
 		05CB8C5423FFE08200A6C28E /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0511669323FFF82B0024B9B7 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0511669523FFF8780024B9B7 /* LoginViewController.swift */,
+				0511669723FFF8960024B9B7 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0511669423FFF8330024B9B7 /* TabbBar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabbBar;
+			sourceTree = "<group>";
+		};
 		05CB8C1D23FFD61900A6C28E = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +115,7 @@
 			children = (
 				05CB8C3123FFD61900A6C28E /* Main.storyboard */,
 				05CB8C3623FFD61C00A6C28E /* LaunchScreen.storyboard */,
+				0511669123FFF7DE0024B9B7 /* Login.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -122,6 +147,7 @@
 			children = (
 				05CB8C2923FFD61900A6C28E /* AppDelegate.swift */,
 				05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */,
+				05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -143,6 +169,8 @@
 		05CB8C4623FFD6B600A6C28E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0511669423FFF8330024B9B7 /* TabbBar */,
+				0511669323FFF82B0024B9B7 /* Login */,
 				05CB8C2D23FFD61900A6C28E /* FirstViewController.swift */,
 				05CB8C2F23FFD61900A6C28E /* SecondViewController.swift */,
 			);
@@ -234,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0511669223FFF7DE0024B9B7 /* Login.storyboard in Resources */,
 				05CB8C3823FFD61C00A6C28E /* LaunchScreen.storyboard in Resources */,
 				05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */,
 				05CB8C3323FFD61900A6C28E /* Main.storyboard in Resources */,
@@ -247,12 +276,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0511669623FFF8780024B9B7 /* LoginViewController.swift in Sources */,
+				05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */,
 				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
 				05CB8C3023FFD61900A6C28E /* SecondViewController.swift in Sources */,
 				05CB8C2E23FFD61900A6C28E /* FirstViewController.swift in Sources */,
 				05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */,
 				05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */,
 				05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */,
+				0511669823FFF8960024B9B7 /* LoginViewModel.swift in Sources */,
 				05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */,
 				05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */,
 				05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */,
