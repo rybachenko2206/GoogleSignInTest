@@ -14,6 +14,12 @@
 		05CB8C3323FFD61900A6C28E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3123FFD61900A6C28E /* Main.storyboard */; };
 		05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3423FFD61C00A6C28E /* Assets.xcassets */; };
 		05CB8C3823FFD61C00A6C28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3623FFD61C00A6C28E /* LaunchScreen.storyboard */; };
+		05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C4A23FFDF7B00A6C28E /* Storyboardable.swift */; };
+		05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C4C23FFDFA100A6C28E /* PrintExtensions.swift */; };
+		05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C4E23FFE03B00A6C28E /* Array.swift */; };
+		05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5023FFE04A00A6C28E /* UIView+Layers.swift */; };
+		05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5123FFE04A00A6C28E /* UITableView+Methods.swift */; };
+		05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5423FFE08200A6C28E /* ReusableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		05CB8C3423FFD61C00A6C28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CB8C3723FFD61C00A6C28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CB8C3923FFD61C00A6C28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CB8C4A23FFDF7B00A6C28E /* Storyboardable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
+		05CB8C4C23FFDFA100A6C28E /* PrintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrintExtensions.swift; sourceTree = "<group>"; };
+		05CB8C4E23FFE03B00A6C28E /* Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
+		05CB8C5023FFE04A00A6C28E /* UIView+Layers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layers.swift"; sourceTree = "<group>"; };
+		05CB8C5123FFE04A00A6C28E /* UITableView+Methods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Methods.swift"; sourceTree = "<group>"; };
+		05CB8C5423FFE08200A6C28E /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +152,8 @@
 		05CB8C4723FFD6CE00A6C28E /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				05CB8C4A23FFDF7B00A6C28E /* Storyboardable.swift */,
+				05CB8C5423FFE08200A6C28E /* ReusableCell.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -147,6 +161,10 @@
 		05CB8C4823FFD6DC00A6C28E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				05CB8C4C23FFDFA100A6C28E /* PrintExtensions.swift */,
+				05CB8C4E23FFE03B00A6C28E /* Array.swift */,
+				05CB8C5123FFE04A00A6C28E /* UITableView+Methods.swift */,
+				05CB8C5023FFE04A00A6C28E /* UIView+Layers.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -229,9 +247,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
 				05CB8C3023FFD61900A6C28E /* SecondViewController.swift in Sources */,
 				05CB8C2E23FFD61900A6C28E /* FirstViewController.swift in Sources */,
+				05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */,
+				05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */,
 				05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */,
+				05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */,
+				05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */,
+				05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */,
 				05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
