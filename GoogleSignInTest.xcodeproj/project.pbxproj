@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		051166A123FFFA8D0024B9B7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051166A023FFFA8D0024B9B7 /* Tabbar.storyboard */; };
 		051166AA240001190024B9B7 /* StoryboardableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166A9240001190024B9B7 /* StoryboardableTests.swift */; };
 		051166B2240002360024B9B7 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166B1240002360024B9B7 /* TabbarVC.swift */; };
+		051166B4240008F10024B9B7 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166B3240008F10024B9B7 /* AuthorizationManager.swift */; };
+		051166B7240034C50024B9B7 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 051166B6240034C50024B9B7 /* KeychainSwift */; };
 		05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2923FFD61900A6C28E /* AppDelegate.swift */; };
 		05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */; };
 		05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3423FFD61C00A6C28E /* Assets.xcassets */; };
@@ -51,6 +53,7 @@
 		051166A9240001190024B9B7 /* StoryboardableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardableTests.swift; sourceTree = "<group>"; };
 		051166AB240001190024B9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		051166B1240002360024B9B7 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		051166B3240008F10024B9B7 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
 		05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignInTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8C2923FFD61900A6C28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				051166B7240034C50024B9B7 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +250,7 @@
 		05CB8C4923FFD6E400A6C28E /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				051166B3240008F10024B9B7 /* AuthorizationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -284,6 +289,9 @@
 			dependencies = (
 			);
 			name = GoogleSignInTest;
+			packageProductDependencies = (
+				051166B6240034C50024B9B7 /* KeychainSwift */,
+			);
 			productName = GoogleSignInTest;
 			productReference = 05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */;
 			productType = "com.apple.product-type.application";
@@ -316,6 +324,9 @@
 				Base,
 			);
 			mainGroup = 05CB8C1D23FFD61900A6C28E;
+			packageReferences = (
+				051166B5240034C50024B9B7 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 05CB8C2723FFD61900A6C28E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0511669623FFF8780024B9B7 /* LoginViewController.swift in Sources */,
+				051166B4240008F10024B9B7 /* AuthorizationManager.swift in Sources */,
 				05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */,
 				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
 				0511669A23FFFA380024B9B7 /* PointsListViewController.swift in Sources */,
@@ -621,6 +633,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		051166B5240034C50024B9B7 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		051166B6240034C50024B9B7 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051166B5240034C50024B9B7 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05CB8C1E23FFD61900A6C28E /* Project object */;
 }

@@ -23,8 +23,11 @@ class AppCoordinator {
     // MARK: - Public funcs
     
     func start() {
-        // TODO: add logic isSignedIn
-         showLogin()
+        if AuthorizationManager.shared.isAuthorized {
+            showTabbar()
+        } else {
+            showLogin()
+        }
     }
     
     // MARK: - Private funcs
