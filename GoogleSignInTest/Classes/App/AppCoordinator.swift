@@ -23,16 +23,21 @@ class AppCoordinator {
     // MARK: - Public funcs
     
     func start() {
-        
+        // TODO: add logic isSignedIn
+         showLogin()
     }
     
     // MARK: - Private funcs
     
     private func showTabbar() {
-        
+        let tabbarVc = TabbarVC.instantiate()
+        navigationController.setNavigationBarHidden(true, animated: false)
+        navigationController.viewControllers = [tabbarVc]
     }
     
     private func showLogin() {
-        
+        let loginVc = LoginViewController.instantiate()
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.viewControllers = [loginVc]
     }
 }

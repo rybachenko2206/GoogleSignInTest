@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="1257" y="-506"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--TabbarVC-->
         <scene sceneID="TeT-b2-tVj">
             <objects>
-                <tabBarController id="W2v-25-YuS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabbarVC" id="W2v-25-YuS" customClass="TabbarVC" customModule="GoogleSignInTest" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4wn-p0-ps8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -10,11 +10,23 @@
         <!--Test App-->
         <scene sceneID="9ZD-7i-ff9">
             <objects>
-                <viewController title="Test App" id="M79-Uj-xUq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="Test App" id="M79-Uj-xUq" customClass="LoginViewController" customModule="GoogleSignInTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5xE-rv-kkJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-l3-uEm">
+                                <rect key="frame" x="137.66666666666666" y="395.66666666666669" width="100" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4NL-l3-uEm" firstAttribute="centerX" secondItem="5xE-rv-kkJ" secondAttribute="centerX" id="1fs-kf-Mhe"/>
+                            <constraint firstItem="4NL-l3-uEm" firstAttribute="centerY" secondItem="5xE-rv-kkJ" secondAttribute="centerY" id="X1E-Mn-cOK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="W7w-1z-cWF"/>
                     </view>
                 </viewController>

@@ -14,10 +14,10 @@
 		0511669C23FFFA480024B9B7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511669B23FFFA480024B9B7 /* MapViewController.swift */; };
 		0511669E23FFFA580024B9B7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511669D23FFFA580024B9B7 /* ProfileViewController.swift */; };
 		051166A123FFFA8D0024B9B7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 051166A023FFFA8D0024B9B7 /* Tabbar.storyboard */; };
+		051166AA240001190024B9B7 /* StoryboardableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166A9240001190024B9B7 /* StoryboardableTests.swift */; };
+		051166B2240002360024B9B7 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166B1240002360024B9B7 /* TabbarVC.swift */; };
 		05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2923FFD61900A6C28E /* AppDelegate.swift */; };
 		05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */; };
-		05CB8C2E23FFD61900A6C28E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2D23FFD61900A6C28E /* FirstViewController.swift */; };
-		05CB8C3023FFD61900A6C28E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2F23FFD61900A6C28E /* SecondViewController.swift */; };
 		05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3423FFD61C00A6C28E /* Assets.xcassets */; };
 		05CB8C3823FFD61C00A6C28E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3623FFD61C00A6C28E /* LaunchScreen.storyboard */; };
 		05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C4A23FFDF7B00A6C28E /* Storyboardable.swift */; };
@@ -29,6 +29,16 @@
 		05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		051166AC240001190024B9B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CB8C1E23FFD61900A6C28E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CB8C2523FFD61900A6C28E;
+			remoteInfo = GoogleSignInTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		0511669123FFF7DE0024B9B7 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		0511669523FFF8780024B9B7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -37,11 +47,13 @@
 		0511669B23FFFA480024B9B7 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0511669D23FFFA580024B9B7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		051166A023FFFA8D0024B9B7 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
+		051166A7240001190024B9B7 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		051166A9240001190024B9B7 /* StoryboardableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardableTests.swift; sourceTree = "<group>"; };
+		051166AB240001190024B9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		051166B1240002360024B9B7 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignInTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8C2923FFD61900A6C28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05CB8C2D23FFD61900A6C28E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		05CB8C2F23FFD61900A6C28E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		05CB8C3423FFD61C00A6C28E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CB8C3723FFD61C00A6C28E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CB8C3923FFD61C00A6C28E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +67,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		051166A4240001190024B9B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8C2323FFD61900A6C28E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -87,14 +106,25 @@
 		051166A223FFFF8A0024B9B7 /* RootViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				051166B1240002360024B9B7 /* TabbarVC.swift */,
 			);
 			path = RootViewControllers;
+			sourceTree = "<group>";
+		};
+		051166A8240001190024B9B7 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				051166A9240001190024B9B7 /* StoryboardableTests.swift */,
+				051166AB240001190024B9B7 /* Info.plist */,
+			);
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 		05CB8C1D23FFD61900A6C28E = {
 			isa = PBXGroup;
 			children = (
 				05CB8C2823FFD61900A6C28E /* GoogleSignInTest */,
+				051166A8240001190024B9B7 /* UnitTests */,
 				05CB8C2723FFD61900A6C28E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */,
+				051166A7240001190024B9B7 /* UnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,8 +219,6 @@
 				051166A223FFFF8A0024B9B7 /* RootViewControllers */,
 				0511669423FFF8330024B9B7 /* TabbBarControllers */,
 				0511669323FFF82B0024B9B7 /* Login */,
-				05CB8C2D23FFD61900A6C28E /* FirstViewController.swift */,
-				05CB8C2F23FFD61900A6C28E /* SecondViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +253,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		051166A6240001190024B9B7 /* UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051166AE240001190024B9B7 /* Build configuration list for PBXNativeTarget "UnitTests" */;
+			buildPhases = (
+				051166A3240001190024B9B7 /* Sources */,
+				051166A4240001190024B9B7 /* Frameworks */,
+				051166A5240001190024B9B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				051166AD240001190024B9B7 /* PBXTargetDependency */,
+			);
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = 051166A7240001190024B9B7 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		05CB8C2523FFD61900A6C28E /* GoogleSignInTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05CB8C3C23FFD61C00A6C28E /* Build configuration list for PBXNativeTarget "GoogleSignInTest" */;
@@ -251,6 +298,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Roman Rybachenko";
 				TargetAttributes = {
+					051166A6240001190024B9B7 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 05CB8C2523FFD61900A6C28E;
+					};
 					05CB8C2523FFD61900A6C28E = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -270,11 +321,19 @@
 			projectRoot = "";
 			targets = (
 				05CB8C2523FFD61900A6C28E /* GoogleSignInTest */,
+				051166A6240001190024B9B7 /* UnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		051166A5240001190024B9B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8C2423FFD61900A6C28E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +348,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		051166A3240001190024B9B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051166AA240001190024B9B7 /* StoryboardableTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		05CB8C2223FFD61900A6C28E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,9 +364,8 @@
 				05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */,
 				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
 				0511669A23FFFA380024B9B7 /* PointsListViewController.swift in Sources */,
-				05CB8C3023FFD61900A6C28E /* SecondViewController.swift in Sources */,
-				05CB8C2E23FFD61900A6C28E /* FirstViewController.swift in Sources */,
 				0511669E23FFFA580024B9B7 /* ProfileViewController.swift in Sources */,
+				051166B2240002360024B9B7 /* TabbarVC.swift in Sources */,
 				05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */,
 				05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */,
 				05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */,
@@ -314,6 +380,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		051166AD240001190024B9B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CB8C2523FFD61900A6C28E /* GoogleSignInTest */;
+			targetProxy = 051166AC240001190024B9B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		05CB8C3623FFD61C00A6C28E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -326,6 +400,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		051166AF240001190024B9B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UHJFHS6M7R;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrybachenko.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleSignInTest.app/GoogleSignInTest";
+			};
+			name = Debug;
+		};
+		051166B0240001190024B9B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UHJFHS6M7R;
+				INFOPLIST_FILE = UnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.rrybachenko.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoogleSignInTest.app/GoogleSignInTest";
+			};
+			name = Release;
+		};
 		05CB8C3A23FFD61C00A6C28E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -479,6 +593,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		051166AE240001190024B9B7 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051166AF240001190024B9B7 /* Debug */,
+				051166B0240001190024B9B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		05CB8C2123FFD61900A6C28E /* Build configuration list for PBXProject "GoogleSignInTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
