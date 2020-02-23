@@ -3,6 +3,8 @@ target 'GoogleSignInTest' do
   
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  
   pod 'GoogleSignIn'
   pod 'GoogleMaps'
 end

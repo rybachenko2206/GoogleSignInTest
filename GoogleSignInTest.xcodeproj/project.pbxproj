@@ -28,6 +28,7 @@
 		05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5423FFE08200A6C28E /* ReusableCell.swift */; };
 		05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */; };
 		05D7E24824003D5400F5A6AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D7E24724003D5400F5A6AA /* GoogleService-Info.plist */; };
+		05D7E24A2402D5B600F5A6AA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7E2492402D5B600F5A6AA /* Place.swift */; };
 		478D3A6BF7C4616C8203D1BA /* libPods-GoogleSignInTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F77B908BCE61226948C002B /* libPods-GoogleSignInTest.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		05CB8C5423FFE08200A6C28E /* ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
 		05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		05D7E24724003D5400F5A6AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		05D7E2492402D5B600F5A6AA /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		2AB0754B3D5F7EB1221B1971 /* Pods-GoogleSignInTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignInTest.release.xcconfig"; path = "Target Support Files/Pods-GoogleSignInTest/Pods-GoogleSignInTest.release.xcconfig"; sourceTree = "<group>"; };
 		2F77B908BCE61226948C002B /* libPods-GoogleSignInTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleSignInTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED9BD7474121F85C6CDACE /* Pods-GoogleSignInTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignInTest.debug.xcconfig"; path = "Target Support Files/Pods-GoogleSignInTest/Pods-GoogleSignInTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,6 +213,7 @@
 		05CB8C4423FFD69F00A6C28E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				05D7E2492402D5B600F5A6AA /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */,
 				05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */,
 				05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */,
+				05D7E24A2402D5B600F5A6AA /* Place.swift in Sources */,
 				05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */,
 				05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */,
 				0511669C23FFFA480024B9B7 /* MapViewController.swift in Sources */,
