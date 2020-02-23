@@ -29,6 +29,10 @@
 		05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */; };
 		05D7E24824003D5400F5A6AA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05D7E24724003D5400F5A6AA /* GoogleService-Info.plist */; };
 		05D7E24A2402D5B600F5A6AA /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7E2492402D5B600F5A6AA /* Place.swift */; };
+		05E1269B2403158C00F4084F /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E126992403158C00F4084F /* PlaceCell.swift */; };
+		05E1269C2403158C00F4084F /* PlaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05E1269A2403158C00F4084F /* PlaceCell.xib */; };
+		05E6AB64240307C100889EA8 /* PointsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6AB63240307C100889EA8 /* PointsListViewModel.swift */; };
+		05E6AB66240310D500889EA8 /* AlertsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E6AB65240310D500889EA8 /* AlertsManager.swift */; };
 		478D3A6BF7C4616C8203D1BA /* libPods-GoogleSignInTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F77B908BCE61226948C002B /* libPods-GoogleSignInTest.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +73,10 @@
 		05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		05D7E24724003D5400F5A6AA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05D7E2492402D5B600F5A6AA /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		05E126992403158C00F4084F /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		05E1269A2403158C00F4084F /* PlaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCell.xib; sourceTree = "<group>"; };
+		05E6AB63240307C100889EA8 /* PointsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsListViewModel.swift; sourceTree = "<group>"; };
+		05E6AB65240310D500889EA8 /* AlertsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsManager.swift; sourceTree = "<group>"; };
 		2AB0754B3D5F7EB1221B1971 /* Pods-GoogleSignInTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignInTest.release.xcconfig"; path = "Target Support Files/Pods-GoogleSignInTest/Pods-GoogleSignInTest.release.xcconfig"; sourceTree = "<group>"; };
 		2F77B908BCE61226948C002B /* libPods-GoogleSignInTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoogleSignInTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9ED9BD7474121F85C6CDACE /* Pods-GoogleSignInTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoogleSignInTest.debug.xcconfig"; path = "Target Support Files/Pods-GoogleSignInTest/Pods-GoogleSignInTest.debug.xcconfig"; sourceTree = "<group>"; };
@@ -104,7 +112,7 @@
 		0511669423FFF8330024B9B7 /* TabbBarControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0511669923FFFA380024B9B7 /* PointsListViewController.swift */,
+				05E6AB62240307A100889EA8 /* PointsList */,
 				0511669B23FFFA480024B9B7 /* MapViewController.swift */,
 				0511669D23FFFA580024B9B7 /* ProfileViewController.swift */,
 			);
@@ -221,6 +229,7 @@
 		05CB8C4523FFD6A800A6C28E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				05E126962403152100F4084F /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,8 +268,27 @@
 			isa = PBXGroup;
 			children = (
 				051166B3240008F10024B9B7 /* AuthorizationManager.swift */,
+				05E6AB65240310D500889EA8 /* AlertsManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		05E126962403152100F4084F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				05E126992403158C00F4084F /* PlaceCell.swift */,
+				05E1269A2403158C00F4084F /* PlaceCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		05E6AB62240307A100889EA8 /* PointsList */ = {
+			isa = PBXGroup;
+			children = (
+				05E6AB63240307C100889EA8 /* PointsListViewModel.swift */,
+				0511669923FFFA380024B9B7 /* PointsListViewController.swift */,
+			);
+			path = PointsList;
 			sourceTree = "<group>";
 		};
 		3C8621EB708F427263F893DA /* Frameworks */ = {
@@ -373,6 +401,7 @@
 				051166A123FFFA8D0024B9B7 /* Tabbar.storyboard in Resources */,
 				0511669223FFF7DE0024B9B7 /* Login.storyboard in Resources */,
 				05D7E24824003D5400F5A6AA /* GoogleService-Info.plist in Resources */,
+				05E1269C2403158C00F4084F /* PlaceCell.xib in Resources */,
 				05CB8C3823FFD61C00A6C28E /* LaunchScreen.storyboard in Resources */,
 				05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */,
 			);
@@ -436,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0511669623FFF8780024B9B7 /* LoginViewController.swift in Sources */,
+				05E6AB64240307C100889EA8 /* PointsListViewModel.swift in Sources */,
 				051166B4240008F10024B9B7 /* AuthorizationManager.swift in Sources */,
 				05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */,
 				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
@@ -448,6 +478,8 @@
 				05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */,
 				05D7E24A2402D5B600F5A6AA /* Place.swift in Sources */,
 				05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */,
+				05E1269B2403158C00F4084F /* PlaceCell.swift in Sources */,
+				05E6AB66240310D500889EA8 /* AlertsManager.swift in Sources */,
 				05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */,
 				0511669C23FFFA480024B9B7 /* MapViewController.swift in Sources */,
 				05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */,
