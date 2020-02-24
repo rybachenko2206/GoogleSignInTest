@@ -9,6 +9,10 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import GoogleMaps
+
+
+private let GMSAPIKey = "AIzaSyDk5L62wf1KU_iEz21Y28zFP6Ph3pKQDtY"
 
 
 @UIApplicationMain
@@ -20,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GMSServices.provideAPIKey(GMSAPIKey)
         
         return true
     }

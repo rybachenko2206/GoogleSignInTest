@@ -14,14 +14,43 @@
                     <view key="view" contentMode="scaleToFill" id="jGh-Pl-QaB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BU5-zI-TGQ" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4lO-Mo-ry4">
+                                <rect key="frame" x="303" y="96" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="LcI-2C-OfI"/>
+                                    <constraint firstAttribute="width" constant="64" id="tKj-OR-HGL"/>
+                                </constraints>
+                                <state key="normal" image="currentLocationButton"/>
+                                <connections>
+                                    <action selector="currentLocationButtonTapped:" destination="gS0-pP-Q0m" eventType="touchUpInside" id="XCn-wc-3Aw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="BU5-zI-TGQ" firstAttribute="trailing" secondItem="Vua-PJ-rR5" secondAttribute="trailing" id="6bL-m5-ubp"/>
+                            <constraint firstItem="Vua-PJ-rR5" firstAttribute="trailing" secondItem="4lO-Mo-ry4" secondAttribute="trailing" constant="8" id="CBj-7S-mZL"/>
+                            <constraint firstItem="4lO-Mo-ry4" firstAttribute="top" secondItem="Vua-PJ-rR5" secondAttribute="top" constant="8" id="Cox-ah-8Bb"/>
+                            <constraint firstItem="BU5-zI-TGQ" firstAttribute="bottom" secondItem="Vua-PJ-rR5" secondAttribute="bottom" id="Hs7-Lj-tLX"/>
+                            <constraint firstItem="BU5-zI-TGQ" firstAttribute="leading" secondItem="Vua-PJ-rR5" secondAttribute="leading" id="Ud6-Aa-sfL"/>
+                            <constraint firstItem="BU5-zI-TGQ" firstAttribute="top" secondItem="Vua-PJ-rR5" secondAttribute="top" id="sZO-Lb-3Wc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Vua-PJ-rR5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="8fC-pW-lPk"/>
+                    <connections>
+                        <outlet property="currentLocationButton" destination="4lO-Mo-ry4" id="ytt-zY-xMG"/>
+                        <outlet property="mapView" destination="BU5-zI-TGQ" id="gAz-fv-aWm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pap-1N-cyF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="213"/>
+            <point key="canvasLocation" x="1292" y="212.80788177339903"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Th7-KP-pYF">
@@ -234,6 +263,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="currentLocationButton" width="64" height="64"/>
         <image name="eye.slash" catalog="system" width="64" height="42"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
         <image name="map" catalog="system" width="64" height="56"/>

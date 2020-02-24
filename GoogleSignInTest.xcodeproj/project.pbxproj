@@ -16,6 +16,33 @@
 		051166AA240001190024B9B7 /* StoryboardableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166A9240001190024B9B7 /* StoryboardableTests.swift */; };
 		051166B2240002360024B9B7 /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166B1240002360024B9B7 /* TabbarVC.swift */; };
 		051166B4240008F10024B9B7 /* AuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051166B3240008F10024B9B7 /* AuthorizationManager.swift */; };
+		05AA5D152403DA1500D00EE5 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 05AA5CCC2403DA1500D00EE5 /* LICENSE */; };
+		05AA5D162403DA1500D00EE5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 05AA5CCD2403DA1500D00EE5 /* README.md */; };
+		05AA5D172403DA1500D00EE5 /* GMUClusterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CD02403DA1500D00EE5 /* GMUClusterManager.m */; };
+		05AA5D182403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CD42403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.m */; };
+		05AA5D192403DA1500D00EE5 /* GMUWrappingDictionaryKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CD72403DA1500D00EE5 /* GMUWrappingDictionaryKey.m */; };
+		05AA5D1A2403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CD82403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.m */; };
+		05AA5D1B2403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CDA2403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */; };
+		05AA5D1C2403DA1500D00EE5 /* GMUDefaultClusterRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CE32403DA1500D00EE5 /* GMUDefaultClusterRenderer.m */; };
+		05AA5D1D2403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CE52403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.m */; };
+		05AA5D1E2403DA1500D00EE5 /* GMUStaticCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CE82403DA1500D00EE5 /* GMUStaticCluster.m */; };
+		05AA5D1F2403DA1500D00EE5 /* GMUWeightedLatLng.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CED2403DA1500D00EE5 /* GMUWeightedLatLng.m */; };
+		05AA5D202403DA1500D00EE5 /* GMUGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CF02403DA1500D00EE5 /* GMUGradient.m */; };
+		05AA5D212403DA1500D00EE5 /* GMUHeatmapTileLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CF12403DA1500D00EE5 /* GMUHeatmapTileLayer.m */; };
+		05AA5D222403DA1500D00EE5 /* GMUKMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CF32403DA1500D00EE5 /* GMUKMLParser.m */; };
+		05AA5D232403DA1500D00EE5 /* GMUGeometryRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CF42403DA1500D00EE5 /* GMUGeometryRenderer.m */; };
+		05AA5D242403DA1500D00EE5 /* GMUGeometryCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CF72403DA1500D00EE5 /* GMUGeometryCollection.m */; };
+		05AA5D252403DA1500D00EE5 /* GMUPlacemark.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CFA2403DA1500D00EE5 /* GMUPlacemark.m */; };
+		05AA5D262403DA1500D00EE5 /* GMUPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CFB2403DA1500D00EE5 /* GMUPolygon.m */; };
+		05AA5D272403DA1500D00EE5 /* GMUFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CFD2403DA1500D00EE5 /* GMUFeature.m */; };
+		05AA5D282403DA1500D00EE5 /* GMUGroundOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5CFF2403DA1500D00EE5 /* GMUGroundOverlay.m */; };
+		05AA5D292403DA1500D00EE5 /* GMUStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D002403DA1500D00EE5 /* GMUStyle.m */; };
+		05AA5D2A2403DA1500D00EE5 /* GMUPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D012403DA1500D00EE5 /* GMUPoint.m */; };
+		05AA5D2B2403DA1500D00EE5 /* GMULineString.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D072403DA1500D00EE5 /* GMULineString.m */; };
+		05AA5D2C2403DA1500D00EE5 /* GMUGeoJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D0B2403DA1500D00EE5 /* GMUGeoJSONParser.m */; };
+		05AA5D2D2403DA1500D00EE5 /* GQTPointQuadTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D0E2403DA1500D00EE5 /* GQTPointQuadTree.m */; };
+		05AA5D2E2403DA1500D00EE5 /* GQTPointQuadTreeChild.m in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D102403DA1500D00EE5 /* GQTPointQuadTreeChild.m */; };
+		05AA5D322403F01A00D00EE5 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AA5D312403F01A00D00EE5 /* MapViewModel.swift */; };
 		05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2923FFD61900A6C28E /* AppDelegate.swift */; };
 		05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */; };
 		05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CB8C3423FFD61C00A6C28E /* Assets.xcassets */; };
@@ -58,6 +85,73 @@
 		051166AB240001190024B9B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		051166B1240002360024B9B7 /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
 		051166B3240008F10024B9B7 /* AuthorizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationManager.swift; sourceTree = "<group>"; };
+		05AA5CCC2403DA1500D00EE5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		05AA5CCD2403DA1500D00EE5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		05AA5CD02403DA1500D00EE5 /* GMUClusterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUClusterManager.m; sourceTree = "<group>"; };
+		05AA5CD12403DA1500D00EE5 /* GMUStaticCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStaticCluster.h; sourceTree = "<group>"; };
+		05AA5CD22403DA1500D00EE5 /* GMUMarkerClustering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUMarkerClustering.h; sourceTree = "<group>"; };
+		05AA5CD42403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGridBasedClusterAlgorithm.m; sourceTree = "<group>"; };
+		05AA5CD52403DA1500D00EE5 /* GMUClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterAlgorithm.h; sourceTree = "<group>"; };
+		05AA5CD62403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUNonHierarchicalDistanceBasedAlgorithm.h; sourceTree = "<group>"; };
+		05AA5CD72403DA1500D00EE5 /* GMUWrappingDictionaryKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUWrappingDictionaryKey.m; sourceTree = "<group>"; };
+		05AA5CD82403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUSimpleClusterAlgorithm.m; sourceTree = "<group>"; };
+		05AA5CD92403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGridBasedClusterAlgorithm.h; sourceTree = "<group>"; };
+		05AA5CDA2403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUNonHierarchicalDistanceBasedAlgorithm.m; sourceTree = "<group>"; };
+		05AA5CDB2403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUSimpleClusterAlgorithm.h; sourceTree = "<group>"; };
+		05AA5CDC2403DA1500D00EE5 /* GMUWrappingDictionaryKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUWrappingDictionaryKey.h; sourceTree = "<group>"; };
+		05AA5CDD2403DA1500D00EE5 /* GMUClusterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterManager.h; sourceTree = "<group>"; };
+		05AA5CDE2403DA1500D00EE5 /* GMUClusterManager+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUClusterManager+Testing.h"; sourceTree = "<group>"; };
+		05AA5CE02403DA1500D00EE5 /* GMUClusterIconGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterIconGenerator.h; sourceTree = "<group>"; };
+		05AA5CE12403DA1500D00EE5 /* GMUClusterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterRenderer.h; sourceTree = "<group>"; };
+		05AA5CE22403DA1500D00EE5 /* GMUDefaultClusterRenderer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUDefaultClusterRenderer+Testing.h"; sourceTree = "<group>"; };
+		05AA5CE32403DA1500D00EE5 /* GMUDefaultClusterRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUDefaultClusterRenderer.m; sourceTree = "<group>"; };
+		05AA5CE42403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUDefaultClusterIconGenerator.h; sourceTree = "<group>"; };
+		05AA5CE52403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUDefaultClusterIconGenerator.m; sourceTree = "<group>"; };
+		05AA5CE62403DA1500D00EE5 /* GMUDefaultClusterRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUDefaultClusterRenderer.h; sourceTree = "<group>"; };
+		05AA5CE72403DA1500D00EE5 /* GMUDefaultClusterIconGenerator+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUDefaultClusterIconGenerator+Testing.h"; sourceTree = "<group>"; };
+		05AA5CE82403DA1500D00EE5 /* GMUStaticCluster.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUStaticCluster.m; sourceTree = "<group>"; };
+		05AA5CE92403DA1500D00EE5 /* GMUCluster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUCluster.h; sourceTree = "<group>"; };
+		05AA5CEA2403DA1500D00EE5 /* GMUClusterItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUClusterItem.h; sourceTree = "<group>"; };
+		05AA5CEC2403DA1500D00EE5 /* GMUGradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGradient.h; sourceTree = "<group>"; };
+		05AA5CED2403DA1500D00EE5 /* GMUWeightedLatLng.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUWeightedLatLng.m; sourceTree = "<group>"; };
+		05AA5CEE2403DA1500D00EE5 /* GMUHeatmapTileLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUHeatmapTileLayer.h; sourceTree = "<group>"; };
+		05AA5CEF2403DA1500D00EE5 /* GMUWeightedLatLng.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUWeightedLatLng.h; sourceTree = "<group>"; };
+		05AA5CF02403DA1500D00EE5 /* GMUGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGradient.m; sourceTree = "<group>"; };
+		05AA5CF12403DA1500D00EE5 /* GMUHeatmapTileLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUHeatmapTileLayer.m; sourceTree = "<group>"; };
+		05AA5CF32403DA1500D00EE5 /* GMUKMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUKMLParser.m; sourceTree = "<group>"; };
+		05AA5CF42403DA1500D00EE5 /* GMUGeometryRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeometryRenderer.m; sourceTree = "<group>"; };
+		05AA5CF52403DA1500D00EE5 /* GMUGeoJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeoJSONParser.h; sourceTree = "<group>"; };
+		05AA5CF72403DA1500D00EE5 /* GMUGeometryCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeometryCollection.m; sourceTree = "<group>"; };
+		05AA5CF82403DA1500D00EE5 /* GMUPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPoint.h; sourceTree = "<group>"; };
+		05AA5CF92403DA1500D00EE5 /* GMUStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUStyle.h; sourceTree = "<group>"; };
+		05AA5CFA2403DA1500D00EE5 /* GMUPlacemark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPlacemark.m; sourceTree = "<group>"; };
+		05AA5CFB2403DA1500D00EE5 /* GMUPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPolygon.m; sourceTree = "<group>"; };
+		05AA5CFC2403DA1500D00EE5 /* GMUGeometryContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryContainer.h; sourceTree = "<group>"; };
+		05AA5CFD2403DA1500D00EE5 /* GMUFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUFeature.m; sourceTree = "<group>"; };
+		05AA5CFE2403DA1500D00EE5 /* GMULineString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMULineString.h; sourceTree = "<group>"; };
+		05AA5CFF2403DA1500D00EE5 /* GMUGroundOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGroundOverlay.m; sourceTree = "<group>"; };
+		05AA5D002403DA1500D00EE5 /* GMUStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUStyle.m; sourceTree = "<group>"; };
+		05AA5D012403DA1500D00EE5 /* GMUPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUPoint.m; sourceTree = "<group>"; };
+		05AA5D022403DA1500D00EE5 /* GMUGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometry.h; sourceTree = "<group>"; };
+		05AA5D032403DA1500D00EE5 /* GMUGeometryCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryCollection.h; sourceTree = "<group>"; };
+		05AA5D042403DA1500D00EE5 /* GMUPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPolygon.h; sourceTree = "<group>"; };
+		05AA5D052403DA1500D00EE5 /* GMUPlacemark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUPlacemark.h; sourceTree = "<group>"; };
+		05AA5D062403DA1500D00EE5 /* GMUGroundOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGroundOverlay.h; sourceTree = "<group>"; };
+		05AA5D072403DA1500D00EE5 /* GMULineString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMULineString.m; sourceTree = "<group>"; };
+		05AA5D082403DA1500D00EE5 /* GMUFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUFeature.h; sourceTree = "<group>"; };
+		05AA5D092403DA1500D00EE5 /* GMUKMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUKMLParser.h; sourceTree = "<group>"; };
+		05AA5D0A2403DA1500D00EE5 /* GMUGeometryRenderer+Testing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GMUGeometryRenderer+Testing.h"; sourceTree = "<group>"; };
+		05AA5D0B2403DA1500D00EE5 /* GMUGeoJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMUGeoJSONParser.m; sourceTree = "<group>"; };
+		05AA5D0C2403DA1500D00EE5 /* GMUGeometryRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMUGeometryRenderer.h; sourceTree = "<group>"; };
+		05AA5D0E2403DA1500D00EE5 /* GQTPointQuadTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTree.m; sourceTree = "<group>"; };
+		05AA5D0F2403DA1500D00EE5 /* GQTPointQuadTreeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeItem.h; sourceTree = "<group>"; };
+		05AA5D102403DA1500D00EE5 /* GQTPointQuadTreeChild.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTPointQuadTreeChild.m; sourceTree = "<group>"; };
+		05AA5D112403DA1500D00EE5 /* GQTPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPoint.h; sourceTree = "<group>"; };
+		05AA5D122403DA1500D00EE5 /* GQTPointQuadTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTree.h; sourceTree = "<group>"; };
+		05AA5D132403DA1500D00EE5 /* GQTPointQuadTreeChild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTPointQuadTreeChild.h; sourceTree = "<group>"; };
+		05AA5D142403DA1500D00EE5 /* GQTBounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTBounds.h; sourceTree = "<group>"; };
+		05AA5D2F2403DAA300D00EE5 /* GoogleSignInTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GoogleSignInTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		05AA5D312403F01A00D00EE5 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		05CB8C2623FFD61900A6C28E /* GoogleSignInTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleSignInTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CB8C2923FFD61900A6C28E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				05E6AB62240307A100889EA8 /* PointsList */,
-				0511669B23FFFA480024B9B7 /* MapViewController.swift */,
+				05AA5D302403EFFF00D00EE5 /* Map */,
 				0511669D23FFFA580024B9B7 /* ProfileViewController.swift */,
 			);
 			path = TabbBarControllers;
@@ -134,6 +228,159 @@
 				051166AB240001190024B9B7 /* Info.plist */,
 			);
 			path = UnitTests;
+			sourceTree = "<group>";
+		};
+		05AA5CCA2403DA1500D00EE5 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CCB2403DA1500D00EE5 /* Google-Maps-iOS-Utils */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		05AA5CCB2403DA1500D00EE5 /* Google-Maps-iOS-Utils */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CCC2403DA1500D00EE5 /* LICENSE */,
+				05AA5CCD2403DA1500D00EE5 /* README.md */,
+				05AA5CCE2403DA1500D00EE5 /* src */,
+			);
+			path = "Google-Maps-iOS-Utils";
+			sourceTree = "<group>";
+		};
+		05AA5CCE2403DA1500D00EE5 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CCF2403DA1500D00EE5 /* Clustering */,
+				05AA5CEB2403DA1500D00EE5 /* Heatmap */,
+				05AA5CF22403DA1500D00EE5 /* Geometry */,
+				05AA5D0D2403DA1500D00EE5 /* QuadTree */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		05AA5CCF2403DA1500D00EE5 /* Clustering */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CD02403DA1500D00EE5 /* GMUClusterManager.m */,
+				05AA5CD12403DA1500D00EE5 /* GMUStaticCluster.h */,
+				05AA5CD22403DA1500D00EE5 /* GMUMarkerClustering.h */,
+				05AA5CD32403DA1500D00EE5 /* Algo */,
+				05AA5CDD2403DA1500D00EE5 /* GMUClusterManager.h */,
+				05AA5CDE2403DA1500D00EE5 /* GMUClusterManager+Testing.h */,
+				05AA5CDF2403DA1500D00EE5 /* View */,
+				05AA5CE82403DA1500D00EE5 /* GMUStaticCluster.m */,
+				05AA5CE92403DA1500D00EE5 /* GMUCluster.h */,
+				05AA5CEA2403DA1500D00EE5 /* GMUClusterItem.h */,
+			);
+			path = Clustering;
+			sourceTree = "<group>";
+		};
+		05AA5CD32403DA1500D00EE5 /* Algo */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CD42403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.m */,
+				05AA5CD52403DA1500D00EE5 /* GMUClusterAlgorithm.h */,
+				05AA5CD62403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.h */,
+				05AA5CD72403DA1500D00EE5 /* GMUWrappingDictionaryKey.m */,
+				05AA5CD82403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.m */,
+				05AA5CD92403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.h */,
+				05AA5CDA2403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.m */,
+				05AA5CDB2403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.h */,
+				05AA5CDC2403DA1500D00EE5 /* GMUWrappingDictionaryKey.h */,
+			);
+			path = Algo;
+			sourceTree = "<group>";
+		};
+		05AA5CDF2403DA1500D00EE5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CE02403DA1500D00EE5 /* GMUClusterIconGenerator.h */,
+				05AA5CE12403DA1500D00EE5 /* GMUClusterRenderer.h */,
+				05AA5CE22403DA1500D00EE5 /* GMUDefaultClusterRenderer+Testing.h */,
+				05AA5CE32403DA1500D00EE5 /* GMUDefaultClusterRenderer.m */,
+				05AA5CE42403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.h */,
+				05AA5CE52403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.m */,
+				05AA5CE62403DA1500D00EE5 /* GMUDefaultClusterRenderer.h */,
+				05AA5CE72403DA1500D00EE5 /* GMUDefaultClusterIconGenerator+Testing.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		05AA5CEB2403DA1500D00EE5 /* Heatmap */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CEC2403DA1500D00EE5 /* GMUGradient.h */,
+				05AA5CED2403DA1500D00EE5 /* GMUWeightedLatLng.m */,
+				05AA5CEE2403DA1500D00EE5 /* GMUHeatmapTileLayer.h */,
+				05AA5CEF2403DA1500D00EE5 /* GMUWeightedLatLng.h */,
+				05AA5CF02403DA1500D00EE5 /* GMUGradient.m */,
+				05AA5CF12403DA1500D00EE5 /* GMUHeatmapTileLayer.m */,
+			);
+			path = Heatmap;
+			sourceTree = "<group>";
+		};
+		05AA5CF22403DA1500D00EE5 /* Geometry */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CF32403DA1500D00EE5 /* GMUKMLParser.m */,
+				05AA5CF42403DA1500D00EE5 /* GMUGeometryRenderer.m */,
+				05AA5CF52403DA1500D00EE5 /* GMUGeoJSONParser.h */,
+				05AA5CF62403DA1500D00EE5 /* Model */,
+				05AA5D092403DA1500D00EE5 /* GMUKMLParser.h */,
+				05AA5D0A2403DA1500D00EE5 /* GMUGeometryRenderer+Testing.h */,
+				05AA5D0B2403DA1500D00EE5 /* GMUGeoJSONParser.m */,
+				05AA5D0C2403DA1500D00EE5 /* GMUGeometryRenderer.h */,
+			);
+			path = Geometry;
+			sourceTree = "<group>";
+		};
+		05AA5CF62403DA1500D00EE5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5CF72403DA1500D00EE5 /* GMUGeometryCollection.m */,
+				05AA5CF82403DA1500D00EE5 /* GMUPoint.h */,
+				05AA5CF92403DA1500D00EE5 /* GMUStyle.h */,
+				05AA5CFA2403DA1500D00EE5 /* GMUPlacemark.m */,
+				05AA5CFB2403DA1500D00EE5 /* GMUPolygon.m */,
+				05AA5CFC2403DA1500D00EE5 /* GMUGeometryContainer.h */,
+				05AA5CFD2403DA1500D00EE5 /* GMUFeature.m */,
+				05AA5CFE2403DA1500D00EE5 /* GMULineString.h */,
+				05AA5CFF2403DA1500D00EE5 /* GMUGroundOverlay.m */,
+				05AA5D002403DA1500D00EE5 /* GMUStyle.m */,
+				05AA5D012403DA1500D00EE5 /* GMUPoint.m */,
+				05AA5D022403DA1500D00EE5 /* GMUGeometry.h */,
+				05AA5D032403DA1500D00EE5 /* GMUGeometryCollection.h */,
+				05AA5D042403DA1500D00EE5 /* GMUPolygon.h */,
+				05AA5D052403DA1500D00EE5 /* GMUPlacemark.h */,
+				05AA5D062403DA1500D00EE5 /* GMUGroundOverlay.h */,
+				05AA5D072403DA1500D00EE5 /* GMULineString.m */,
+				05AA5D082403DA1500D00EE5 /* GMUFeature.h */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		05AA5D0D2403DA1500D00EE5 /* QuadTree */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5D0E2403DA1500D00EE5 /* GQTPointQuadTree.m */,
+				05AA5D0F2403DA1500D00EE5 /* GQTPointQuadTreeItem.h */,
+				05AA5D102403DA1500D00EE5 /* GQTPointQuadTreeChild.m */,
+				05AA5D112403DA1500D00EE5 /* GQTPoint.h */,
+				05AA5D122403DA1500D00EE5 /* GQTPointQuadTree.h */,
+				05AA5D132403DA1500D00EE5 /* GQTPointQuadTreeChild.h */,
+				05AA5D142403DA1500D00EE5 /* GQTBounds.h */,
+			);
+			path = QuadTree;
+			sourceTree = "<group>";
+		};
+		05AA5D302403EFFF00D00EE5 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				05AA5D312403F01A00D00EE5 /* MapViewModel.swift */,
+				0511669B23FFFA480024B9B7 /* MapViewController.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		05CB8C1D23FFD61900A6C28E = {
@@ -199,6 +446,7 @@
 			children = (
 				05CB8C4323FFD68A00A6C28E /* App */,
 				05CB8C4923FFD6E400A6C28E /* Managers */,
+				05AA5CCA2403DA1500D00EE5 /* Libraries */,
 				05CB8C4823FFD6DC00A6C28E /* Extensions */,
 				05CB8C4723FFD6CE00A6C28E /* Protocols */,
 				05CB8C4423FFD69F00A6C28E /* Models */,
@@ -214,6 +462,7 @@
 				05CB8C2923FFD61900A6C28E /* AppDelegate.swift */,
 				05CB8C2B23FFD61900A6C28E /* SceneDelegate.swift */,
 				05CB8C5723FFE31A00A6C28E /* AppCoordinator.swift */,
+				05AA5D2F2403DAA300D00EE5 /* GoogleSignInTest-Bridging-Header.h */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -401,8 +650,10 @@
 				051166A123FFFA8D0024B9B7 /* Tabbar.storyboard in Resources */,
 				0511669223FFF7DE0024B9B7 /* Login.storyboard in Resources */,
 				05D7E24824003D5400F5A6AA /* GoogleService-Info.plist in Resources */,
+				05AA5D152403DA1500D00EE5 /* LICENSE in Resources */,
 				05E1269C2403158C00F4084F /* PlaceCell.xib in Resources */,
 				05CB8C3823FFD61C00A6C28E /* LaunchScreen.storyboard in Resources */,
+				05AA5D162403DA1500D00EE5 /* README.md in Resources */,
 				05CB8C3523FFD61C00A6C28E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,23 +716,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				0511669623FFF8780024B9B7 /* LoginViewController.swift in Sources */,
+				05AA5D2C2403DA1500D00EE5 /* GMUGeoJSONParser.m in Sources */,
 				05E6AB64240307C100889EA8 /* PointsListViewModel.swift in Sources */,
 				051166B4240008F10024B9B7 /* AuthorizationManager.swift in Sources */,
+				05AA5D202403DA1500D00EE5 /* GMUGradient.m in Sources */,
 				05CB8C5823FFE31A00A6C28E /* AppCoordinator.swift in Sources */,
+				05AA5D1C2403DA1500D00EE5 /* GMUDefaultClusterRenderer.m in Sources */,
 				05CB8C5523FFE08200A6C28E /* ReusableCell.swift in Sources */,
+				05AA5D192403DA1500D00EE5 /* GMUWrappingDictionaryKey.m in Sources */,
+				05AA5D272403DA1500D00EE5 /* GMUFeature.m in Sources */,
+				05AA5D2A2403DA1500D00EE5 /* GMUPoint.m in Sources */,
+				05AA5D2E2403DA1500D00EE5 /* GQTPointQuadTreeChild.m in Sources */,
+				05AA5D212403DA1500D00EE5 /* GMUHeatmapTileLayer.m in Sources */,
 				0511669A23FFFA380024B9B7 /* PointsListViewController.swift in Sources */,
+				05AA5D282403DA1500D00EE5 /* GMUGroundOverlay.m in Sources */,
 				0511669E23FFFA580024B9B7 /* ProfileViewController.swift in Sources */,
 				051166B2240002360024B9B7 /* TabbarVC.swift in Sources */,
+				05AA5D1B2403DA1500D00EE5 /* GMUNonHierarchicalDistanceBasedAlgorithm.m in Sources */,
+				05AA5D172403DA1500D00EE5 /* GMUClusterManager.m in Sources */,
 				05CB8C5223FFE04B00A6C28E /* UIView+Layers.swift in Sources */,
+				05AA5D2B2403DA1500D00EE5 /* GMULineString.m in Sources */,
+				05AA5D182403DA1500D00EE5 /* GMUGridBasedClusterAlgorithm.m in Sources */,
+				05AA5D1F2403DA1500D00EE5 /* GMUWeightedLatLng.m in Sources */,
+				05AA5D292403DA1500D00EE5 /* GMUStyle.m in Sources */,
 				05CB8C4F23FFE03B00A6C28E /* Array.swift in Sources */,
+				05AA5D1A2403DA1500D00EE5 /* GMUSimpleClusterAlgorithm.m in Sources */,
 				05CB8C2A23FFD61900A6C28E /* AppDelegate.swift in Sources */,
+				05AA5D242403DA1500D00EE5 /* GMUGeometryCollection.m in Sources */,
 				05CB8C4D23FFDFA100A6C28E /* PrintExtensions.swift in Sources */,
 				05D7E24A2402D5B600F5A6AA /* Place.swift in Sources */,
 				05CB8C5323FFE04B00A6C28E /* UITableView+Methods.swift in Sources */,
+				05AA5D2D2403DA1500D00EE5 /* GQTPointQuadTree.m in Sources */,
 				05E1269B2403158C00F4084F /* PlaceCell.swift in Sources */,
 				05E6AB66240310D500889EA8 /* AlertsManager.swift in Sources */,
+				05AA5D252403DA1500D00EE5 /* GMUPlacemark.m in Sources */,
+				05AA5D1E2403DA1500D00EE5 /* GMUStaticCluster.m in Sources */,
 				05CB8C4B23FFDF7B00A6C28E /* Storyboardable.swift in Sources */,
 				0511669C23FFFA480024B9B7 /* MapViewController.swift in Sources */,
+				05AA5D232403DA1500D00EE5 /* GMUGeometryRenderer.m in Sources */,
+				05AA5D322403F01A00D00EE5 /* MapViewModel.swift in Sources */,
+				05AA5D222403DA1500D00EE5 /* GMUKMLParser.m in Sources */,
+				05AA5D262403DA1500D00EE5 /* GMUPolygon.m in Sources */,
+				05AA5D1D2403DA1500D00EE5 /* GMUDefaultClusterIconGenerator.m in Sources */,
 				05CB8C2C23FFD61900A6C28E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -676,6 +952,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rrybachenko.GoogleSignInTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleSignInTest/Classes/App/GoogleSignInTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -695,6 +972,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.rrybachenko.GoogleSignInTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GoogleSignInTest/Classes/App/GoogleSignInTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
