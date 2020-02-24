@@ -26,18 +26,57 @@
         <!--Profile-->
         <scene sceneID="Th7-KP-pYF">
             <objects>
-                <viewController id="3kf-Af-pbB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" id="3kf-Af-pbB" customClass="ProfileViewController" customModule="GoogleSignInTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LkO-pZ-L1p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are authorized as: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq3-1j-t31">
+                                <rect key="frame" x="16" y="141" width="343" height="19.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="vV3-xN-Wvo">
+                                <rect key="frame" x="16" y="164.33333333333334" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJ6-BW-WX6">
+                                <rect key="frame" x="16" y="225.33333333333334" width="343" height="48.000000000000028"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Vni-mm-1G0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="signOut:" destination="3kf-Af-pbB" eventType="touchUpInside" id="4kP-93-JUw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JJ6-BW-WX6" firstAttribute="top" secondItem="vV3-xN-Wvo" secondAttribute="bottom" constant="40" id="0UJ-ic-Jh7"/>
+                            <constraint firstItem="vV3-xN-Wvo" firstAttribute="leading" secondItem="YNG-mR-WSY" secondAttribute="leading" constant="16" id="2pb-Lq-3IO"/>
+                            <constraint firstItem="YNG-mR-WSY" firstAttribute="trailing" secondItem="vV3-xN-Wvo" secondAttribute="trailing" constant="16" id="C0R-fj-dlf"/>
+                            <constraint firstItem="eq3-1j-t31" firstAttribute="leading" secondItem="YNG-mR-WSY" secondAttribute="leading" constant="16" id="HgX-fG-tdW"/>
+                            <constraint firstItem="YNG-mR-WSY" firstAttribute="trailing" secondItem="JJ6-BW-WX6" secondAttribute="trailing" constant="16" id="TVT-Ph-9OX"/>
+                            <constraint firstItem="eq3-1j-t31" firstAttribute="top" secondItem="YNG-mR-WSY" secondAttribute="top" constant="53" id="Zmr-9t-xJv"/>
+                            <constraint firstItem="YNG-mR-WSY" firstAttribute="trailing" secondItem="eq3-1j-t31" secondAttribute="trailing" constant="16" id="aZy-He-NyS"/>
+                            <constraint firstItem="vV3-xN-Wvo" firstAttribute="top" secondItem="eq3-1j-t31" secondAttribute="bottom" constant="4" id="gzJ-MT-HGx"/>
+                            <constraint firstItem="JJ6-BW-WX6" firstAttribute="leading" secondItem="YNG-mR-WSY" secondAttribute="leading" constant="16" id="jj7-QK-yt2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="YNG-mR-WSY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="6Y1-iI-J0v"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="vV3-xN-Wvo" id="beM-cu-zaY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wf5-5E-s55" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="933"/>
+            <point key="canvasLocation" x="1292" y="932.51231527093603"/>
         </scene>
         <!--My Points-->
         <scene sceneID="GZA-jD-TXJ">

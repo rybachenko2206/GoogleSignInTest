@@ -34,6 +34,11 @@ class AppCoordinator {
     
     private func showTabbar() {
         let tabbarVc = TabbarVC.instantiate()
+        
+        tabbarVc.userDidSignOut = { [weak self] in
+            self?.showLogin()
+        }
+        
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.viewControllers = [tabbarVc]
     }

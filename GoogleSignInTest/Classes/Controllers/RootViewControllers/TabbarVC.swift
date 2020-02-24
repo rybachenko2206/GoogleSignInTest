@@ -14,5 +14,7 @@ class TabbarVC: UITabBarController, Storyboardable {
         return .tabbar
     }
     
+    var userDidSignOut: (() -> Void)?
+    
 
 }
