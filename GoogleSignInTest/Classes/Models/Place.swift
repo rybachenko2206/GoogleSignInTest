@@ -11,13 +11,15 @@ import Firebase
 import CoreLocation
 
 
-struct Place {
+class Place: NSObject, GMUClusterItem {
     
     // MARK: - Properties
     let id: String
     let ref: DatabaseReference?
     let name: String
-    let coordinates: CLLocationCoordinate2D
+    let position: CLLocationCoordinate2D
+    
+    let icon: UIImage?
     
     static let entityName = String(describing: Place.self)
     
@@ -26,8 +28,10 @@ struct Place {
     init(name: String, coordinates: CLLocationCoordinate2D) {
         self.id = UUID().uuidString
         self.name = name
-        self.coordinates = coordinates
+        self.position = coordinates
         self.ref = nil
+        
+        self.icon = Place.randMarkerIcon()
     }
     
     init?(snapshot: DataSnapshot) {
@@ -40,8 +44,9 @@ struct Place {
         
         self.id = id
         self.name = name
-        self.coordinates = CLLocationCoordinate2D(latitude: lat, longitude: lon)
+        self.position = CLLocationCoordinate2D(latitude: lat, longitude: lon)
         self.ref = snapshot.ref
+        self.icon = Place.randMarkerIcon()
     }
     
     
@@ -50,9 +55,16 @@ struct Place {
         return [
             Keys.kPlaceId: id,
             Keys.kName: name,
-            Keys.kLatitude: NSNumber(floatLiteral: coordinates.latitude),
-            Keys.kLongitude: NSNumber(floatLiteral: coordinates.longitude)
+            Keys.kLatitude: NSNumber(floatLiteral: position.latitude),
+            Keys.kLongitude: NSNumber(floatLiteral: position.longitude)
         ]
+    }
+    
+    private class func randMarkerIcon() -> UIImage? {
+        let iconNames = ["markerRed", "markerGreen", "markerCyan", "markerOrange", "markerPurple", "markerBrown"]
+        let randIndex = Int.random(in: 0..<iconNames.count)
+        let iName = iconNames[randIndex]
+        return UIImage(named: iName)
     }
     
 }

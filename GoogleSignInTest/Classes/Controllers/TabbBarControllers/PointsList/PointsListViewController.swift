@@ -97,8 +97,8 @@ extension PointsListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PlaceCell.self)
         cell.delegate = self
         cell.nameLabel.text = place.name
-        cell.latitudeLabel.text = place.coordinates.latitude.description
-        cell.longitudeLabel.text = place.coordinates.longitude.description
+        cell.latitudeLabel.text = place.position.latitude.description
+        cell.longitudeLabel.text = place.position.longitude.description
         
         return cell
     }

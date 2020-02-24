@@ -10,8 +10,10 @@ import Foundation
 import Firebase
 import CoreLocation
 
+
 typealias Completion = () -> Void
 typealias FailureHandler = (Error) -> Void
+
 
 class PointsListViewModel {
     
@@ -27,12 +29,6 @@ class PointsListViewModel {
     init() {
         self.ref = Database.database().reference(withPath: Place.entityName)
         self.observeReference()
-//        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
-//            let new = Place(name: "Test Place 1", coordinates: CLLocationCoordinate2D(latitude: 1.1111, longitude: 1.1111))
-//            self?.addPlace(new)
-//
-//        })
     }
     
     
@@ -42,7 +38,7 @@ class PointsListViewModel {
         item.ref?.removeValue()
         places.remove(at: index)
     }
-    
+
     func addPlace(_ place: Place) {
         let newRef = ref?.child(place.id)
         newRef?.setValue(place.toAny(),

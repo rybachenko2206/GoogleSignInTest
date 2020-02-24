@@ -25,7 +25,9 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupClusterManager()
         bindViewModel()
+        mapView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,9 +47,23 @@ class MapViewController: UIViewController {
     // MARK: - Private funcs
     
     private func bindViewModel() {
+        viewModel.observeReference()
+        
         viewModel.locationAuthorizationStatusChanged = { [weak self] in
-            self?.mapView.isMyLocationEnabled = true
-            self?.moveToCurrentLocation()
+            DispatchQueue.main.async {
+                self?.mapView.isMyLocationEnabled = true
+                self?.moveToCurrentLocation()
+            }
+        }
+        
+        viewModel.placeReceived = { [weak self] place in
+            DispatchQueue.main.async {
+                self?.addPlaceMarker(place)
+            }
+        }
+        
+        viewModel.placeRemoved = { [weak self] place in
+            self?.removePlaceMarker(place)
         }
     }
     
@@ -84,32 +100,31 @@ class MapViewController: UIViewController {
                                            viewingAngle: 0)
     }
     
-//    fileprivate func centrateMarker(_ marker: Place) {
-//        let mapZoom = mapView.camera.zoom > maxClusterZoom ? mapView.camera.zoom : maxClusterZoom + 1
-//        mapView.camera = GMSCameraPosition(target: marker.position,
-//                                           zoom: mapZoom,
-//                                           bearing: 0,
-//                                           viewingAngle: 0)
-//    }
+    fileprivate func centrateMarker(_ marker: Place) {
+        let mapZoom = mapView.camera.zoom > Constants.maxClusterZoom ? mapView.camera.zoom : Constants.maxClusterZoom + 1
+        mapView.camera = GMSCameraPosition(target: marker.position,
+                                           zoom: mapZoom,
+                                           bearing: 0,
+                                           viewingAngle: 0)
+    }
     
-//    private func addPlaceMarkers(_ places: [Place]) {
-//        clusterManager.clearItems()
-//        clusterManager.add(places)
-//        allPlaces.removeAll()
-//        allPlaces = Set(places)
-//    }
-//
-//    private func addPlaceMarker(for place: Place) -> Place {
-//        if let item = allPlaces.first(where: {$0.id == terminal.id}) {
-//            allPlaces.remove(item)
-//            allPlaces.insert(terminal)
-//        } else {
-//            allPlaces.insert(place)
-//            clusterManager.add(place)
-//        }
-//
-//        return terminal
-//    }
+
+    private func addPlaceMarker(_ place: Place) {
+        let marker = GMSMarker(position: place.position)
+        marker.icon = place.icon
+        marker.title = place.name
+        marker.snippet = "What is snippet?"
+        marker.map = mapView
+        
+//        clusterManager.add(place)
+//        clusterManager.cluster()
+    }
+    
+    
+    private func removePlaceMarker(_ place: Place) {
+        clusterManager.remove(place)
+        clusterManager.cluster()
+    }
     
     
 }
@@ -118,8 +133,8 @@ extension MapViewController {
     private struct Constants {
         static let initialCoordinate = CLLocationCoordinate2DMake(50.450648, 30.523117)
         static let mapViewDefaultZoom: Float = 6
-        static let maxRadius = 5000
-        static let maxClusterZoom: Float = 13
+        static let maxRadius = 30_000
+        static let maxClusterZoom: Float = 1
     }
 }
 
@@ -127,13 +142,22 @@ extension MapViewController {
 extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        
+        if mapView.selectedMarker == marker {
+            mapView.selectedMarker = nil
+        } else {
+            mapView.selectedMarker = marker
+        }
         
         return true
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
-        
+        mapView.selectedMarker = nil
+    }
+    
+    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
+        pf()
+        // TODO: show alert "add new place"
     }
 
 }

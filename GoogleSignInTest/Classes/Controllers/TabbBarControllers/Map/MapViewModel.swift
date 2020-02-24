@@ -8,6 +8,7 @@
 
 import Foundation
 import MapKit
+import Firebase
 
 
 class MapViewModel: NSObject {
@@ -15,13 +16,40 @@ class MapViewModel: NSObject {
     let locationManager = CLLocationManager()
     var locationAuthorizationStatusChanged: Completion?
     
+    private (set) var places: Set<Place> = []
+    private var ref: DatabaseReference?
+    
+    var placeReceived: ((Place) -> Void)?
+    var placeRemoved: ((Place) -> Void)?
     
     override init() {
         super.init()
         
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.ref = Database.database().reference(withPath: Place.entityName)
+        
+        self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    func observeReference() {
+        ref?.observe(.childAdded, with: { [weak self] snapshot in
+            if let newPlace = Place(snapshot: snapshot),
+                self?.places.contains(newPlace) == false
+            {
+                self?.places.insert(newPlace)
+                self?.placeReceived?(newPlace)
+            }
+        })
+        
+        ref?.observe(.childRemoved, with: { [weak self] snapshot in
+            if let removedPlace = Place(snapshot: snapshot),
+                self?.places.contains(removedPlace) == true
+            {
+                self?.places.remove(removedPlace)
+                self?.placeRemoved?(removedPlace)
+            }
+        })
     }
 }
 
