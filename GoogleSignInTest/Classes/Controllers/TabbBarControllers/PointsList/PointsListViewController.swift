@@ -65,6 +65,22 @@ class PointsListViewController: UIViewController {
         emptyResponseView.isHidden = true
     }
     
+    private func deleteCell(at indexPath: IndexPath) {
+        guard let place = viewModel.places[safe: indexPath.row] else { return }
+        let ac = UIAlertController(title: "Attention!",
+                                   message: "Delete place \(place.name)?",
+                                   preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] action in
+            self?.viewModel.removePlace(at: indexPath.row)
+        })
+        ac.addAction(cancelAction)
+        ac.addAction(deleteAction)
+        
+        self.present(ac, animated: true, completion: nil)
+    }
+    
 }
 
 
@@ -79,6 +95,7 @@ extension PointsListViewController: UITableViewDataSource {
         guard let place = viewModel.places[safe: indexPath.row] else { return UITableViewCell () }
         
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: PlaceCell.self)
+        cell.delegate = self
         cell.nameLabel.text = place.name
         cell.latitudeLabel.text = place.coordinates.latitude.description
         cell.longitudeLabel.text = place.coordinates.longitude.description
@@ -103,3 +120,12 @@ extension PointsListViewController: UITableViewDelegate {
 }
 
 
+
+extension PointsListViewController: PlaceCellDelegate {
+    
+    func longTap(in cell: PlaceCell) {
+        guard let ip = tableView.indexPath(for: cell) else { return }
+        deleteCell(at: ip)
+    }
+    
+}
