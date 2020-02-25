@@ -21,6 +21,7 @@ class MapViewModel: NSObject {
     
     var placeReceived: ((Place) -> Void)?
     var placeRemoved: ((Place) -> Void)?
+    var errorReceived: FailureHandler?
     
     override init() {
         super.init()
@@ -30,6 +31,16 @@ class MapViewModel: NSObject {
         self.locationManager.delegate = self
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+    }
+    
+    func addNewPlace(_ place: Place) {
+        let newRef = ref?.child(place.id)
+        newRef?.setValue(place.toAny(),
+                         withCompletionBlock: { [weak self] (error, _) in
+                            if let error = error {
+                                self?.errorReceived?(error)
+                            }
+        })
     }
     
     func observeReference() {

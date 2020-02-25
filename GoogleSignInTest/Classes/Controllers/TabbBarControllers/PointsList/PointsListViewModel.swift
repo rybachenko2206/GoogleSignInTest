@@ -38,18 +38,6 @@ class PointsListViewModel {
         item.ref?.removeValue()
         places.remove(at: index)
     }
-
-    func addPlace(_ place: Place) {
-        let newRef = ref?.child(place.id)
-        newRef?.setValue(place.toAny(),
-                         withCompletionBlock: { [weak self] (error, _) in
-                            if let error = error {
-                                self?.errorReceived?(error)
-                            } else {
-                                self?.places.append(place)
-                            }
-        })
-    }
     
     
     // MARK: - Private funcs

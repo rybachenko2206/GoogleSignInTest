@@ -126,6 +126,18 @@ class MapViewController: UIViewController {
         clusterManager.cluster()
     }
     
+    private func addNewPlace(with coordinate: CLLocationCoordinate2D) {
+        AlertsManager.showAlertAddNewPlace(to: self, okCompletion: { [weak self] placeName in
+            var name = placeName
+            if placeName.isEmpty {
+                let count = (self?.viewModel.places.count ?? 0) + 1
+                name = "Place \(count)"
+            }
+            
+            let newPlace = Place(name: name, coordinates: coordinate)
+            self?.viewModel.addNewPlace(newPlace)
+        })
+    }
     
 }
 
@@ -156,8 +168,7 @@ extension MapViewController: GMSMapViewDelegate {
     }
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        pf()
-        // TODO: show alert "add new place"
+        addNewPlace(with: coordinate)
     }
 
 }
