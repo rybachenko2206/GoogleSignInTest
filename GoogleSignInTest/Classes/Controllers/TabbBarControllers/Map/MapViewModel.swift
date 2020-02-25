@@ -16,11 +16,11 @@ class MapViewModel: NSObject {
     let locationManager = CLLocationManager()
     var locationAuthorizationStatusChanged: Completion?
     
-    private (set) var places: Set<Place> = []
+    private (set) var placeMarkers: Set<PlaceMarker> = []
     private var ref: DatabaseReference?
     
-    var placeReceived: ((Place) -> Void)?
-    var placeRemoved: ((Place) -> Void)?
+    var placeReceived: ((PlaceMarker) -> Void)?
+    var placeRemoved: ((PlaceMarker) -> Void)?
     var errorReceived: FailureHandler?
     
     override init() {
@@ -46,19 +46,20 @@ class MapViewModel: NSObject {
     func observeReference() {
         ref?.observe(.childAdded, with: { [weak self] snapshot in
             if let newPlace = Place(snapshot: snapshot),
-                self?.places.contains(newPlace) == false
+                self?.placeMarkers.contains(where: { $0.place.id == newPlace.id }) == false
             {
-                self?.places.insert(newPlace)
-                self?.placeReceived?(newPlace)
+                let marker = PlaceMarker(newPlace)
+                self?.placeMarkers.insert(marker)
+                self?.placeReceived?(marker)
             }
         })
         
         ref?.observe(.childRemoved, with: { [weak self] snapshot in
             if let removedPlace = Place(snapshot: snapshot),
-                self?.places.contains(removedPlace) == true
+                let marker = self?.placeMarkers.first(where: { $0.place.id == removedPlace.id })
             {
-                self?.places.remove(removedPlace)
-                self?.placeRemoved?(removedPlace)
+                self?.placeMarkers.remove(marker)
+                self?.placeRemoved?(marker)
             }
         })
     }

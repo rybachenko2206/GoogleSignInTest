@@ -56,14 +56,14 @@ class MapViewController: UIViewController {
             }
         }
         
-        viewModel.placeReceived = { [weak self] place in
+        viewModel.placeReceived = { [weak self] marker in
             DispatchQueue.main.async {
-                self?.addPlaceMarker(place)
+                self?.addPlaceMarker(marker)
             }
         }
         
-        viewModel.placeRemoved = { [weak self] place in
-            self?.removePlaceMarker(place)
+        viewModel.placeRemoved = { [weak self] marker in
+            self?.removePlaceMarker(marker)
         }
     }
     
@@ -109,28 +109,24 @@ class MapViewController: UIViewController {
     }
     
 
-    private func addPlaceMarker(_ place: Place) {
-        let marker = GMSMarker(position: place.position)
-        marker.icon = place.icon
-        marker.title = place.name
-        marker.snippet = "What is snippet?"
-        marker.map = mapView
-        
-//        clusterManager.add(place)
-//        clusterManager.cluster()
+    private func addPlaceMarker(_ marker: PlaceMarker) {
+        DispatchQueue.main.async { [weak self] in
+            marker.map = self?.mapView
+        }
     }
     
     
-    private func removePlaceMarker(_ place: Place) {
-        clusterManager.remove(place)
-        clusterManager.cluster()
+    private func removePlaceMarker(_ marker: PlaceMarker) {
+        DispatchQueue.main.async {
+            marker.map = nil
+        }
     }
     
     private func addNewPlace(with coordinate: CLLocationCoordinate2D) {
         AlertsManager.showAlertAddNewPlace(to: self, okCompletion: { [weak self] placeName in
             var name = placeName
             if placeName.isEmpty {
-                let count = (self?.viewModel.places.count ?? 0) + 1
+                let count = (self?.viewModel.placeMarkers.count ?? 0) + 1
                 name = "Place \(count)"
             }
             

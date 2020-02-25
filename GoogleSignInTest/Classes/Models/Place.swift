@@ -11,7 +11,7 @@ import Firebase
 import CoreLocation
 
 
-class Place: NSObject, GMUClusterItem {
+class Place {
     
     // MARK: - Properties
     let id: String
@@ -77,6 +77,20 @@ extension Place {
         static let kName = "name"
         static let kLatitude = "latitude"
         static let kLongitude = "longitude"
+    }
+    
+}
+
+
+class PlaceMarker: GMSMarker {
+    let place: Place
+    
+    init(_ place: Place) {
+        self.place = place
+        super.init()
+        self.position = place.position
+        self.icon = place.icon
+        self.title = place.name
     }
     
 }
