@@ -89,8 +89,22 @@ class PlaceMarker: GMSMarker {
         self.place = place
         super.init()
         self.position = place.position
-        self.icon = place.icon
         self.title = place.name
+        
+        let imageView = UIImageView(image: place.icon)
+        self.iconView = imageView
     }
     
+}
+
+
+class PlaceClusterItem: NSObject, GMUClusterItem {
+    let place: Place
+    var position: CLLocationCoordinate2D {
+        return place.position
+    }
+
+    init(with place: Place) {
+        self.place = place
+    }
 }

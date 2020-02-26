@@ -16,11 +16,11 @@ class MapViewModel: NSObject {
     let locationManager = CLLocationManager()
     var locationAuthorizationStatusChanged: Completion?
     
-    private (set) var placeMarkers: Set<PlaceMarker> = []
+    private (set) var placeItems: Set<PlaceClusterItem> = []
     private var ref: DatabaseReference?
     
-    var placeReceived: ((PlaceMarker) -> Void)?
-    var placeRemoved: ((PlaceMarker) -> Void)?
+    var placeReceived: ((PlaceClusterItem) -> Void)?
+    var placeRemoved: ((PlaceClusterItem) -> Void)?
     var errorReceived: FailureHandler?
     
     override init() {
@@ -46,20 +46,20 @@ class MapViewModel: NSObject {
     func observeReference() {
         ref?.observe(.childAdded, with: { [weak self] snapshot in
             if let newPlace = Place(snapshot: snapshot),
-                self?.placeMarkers.contains(where: { $0.place.id == newPlace.id }) == false
+                self?.placeItems.contains(where: { $0.place.id == newPlace.id }) == false
             {
-                let marker = PlaceMarker(newPlace)
-                self?.placeMarkers.insert(marker)
-                self?.placeReceived?(marker)
+                let item = PlaceClusterItem(with: newPlace)
+                self?.placeItems.insert(item)
+                self?.placeReceived?(item)
             }
         })
         
         ref?.observe(.childRemoved, with: { [weak self] snapshot in
             if let removedPlace = Place(snapshot: snapshot),
-                let marker = self?.placeMarkers.first(where: { $0.place.id == removedPlace.id })
+                let removeItem = self?.placeItems.first(where: { $0.place.id == removedPlace.id })
             {
-                self?.placeMarkers.remove(marker)
-                self?.placeRemoved?(marker)
+                self?.placeItems.remove(removeItem)
+                self?.placeRemoved?(removeItem)
             }
         })
     }

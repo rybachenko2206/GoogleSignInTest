@@ -18,8 +18,14 @@ class MapViewController: UIViewController {
     
     // MARK: - Properties
     private let viewModel = MapViewModel()
-    
     private var clusterManager: GMUClusterManager!
+    
+    private var selectedItem: PlaceClusterItem?
+    
+    // Used when places is not received from Firebase
+    // but it's selected on Places list
+    private var selectedPlace: Place?
+    
     
     // MARK: - Overriden funcs
     override func viewDidLoad() {
@@ -27,20 +33,32 @@ class MapViewController: UIViewController {
 
         setupClusterManager()
         bindViewModel()
-        mapView.delegate = self
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        checkLocationStatus()
+
+        setInitialLocation()
     }
     
     
     // MARK: - Actions
-    
     @IBAction func currentLocationButtonTapped(_ sender: UIButton) {
         moveToCurrentLocation()
+    }
+    
+    
+    // MARK: - Public funcs
+    func showPlace(_ place: Place) {
+        if let clusterItem = viewModel.placeItems.first(where: { $0.place.id == place.id }) {
+            selectedItem = clusterItem
+            let mapZoom = mapView.camera.zoom > Constants.maxClusterZoom ? mapView.camera.zoom : Constants.maxClusterZoom + 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + Constants.selectedMarkerDelay , execute: {
+                self.mapView.camera = GMSCameraPosition(target: place.position,
+                                                        zoom: mapZoom,
+                                                        bearing: 0,
+                                                        viewingAngle: 0)
+            })
+            
+        } else {
+            selectedPlace = place
+        }
     }
     
     
@@ -56,21 +74,25 @@ class MapViewController: UIViewController {
             }
         }
         
-        viewModel.placeReceived = { [weak self] marker in
+        viewModel.placeReceived = { [weak self] clusterItem in
             DispatchQueue.main.async {
-                self?.addPlaceMarker(marker)
+                if clusterItem.place.id == self?.selectedPlace?.id {
+                    self?.selectedItem = clusterItem
+                    self?.selectedPlace = nil
+                }
+                self?.addPlaceItem(clusterItem)
             }
         }
         
         viewModel.placeRemoved = { [weak self] marker in
-            self?.removePlaceMarker(marker)
+            self?.removePlaceItem(marker)
         }
     }
     
     private func moveToCurrentLocation() {
         guard let coordinate = viewModel.locationManager.location?.coordinate else { return }
         let camera = GMSCameraPosition(target: coordinate,
-                                       zoom: Constants.mapViewDefaultZoom,
+                                       zoom: mapView.camera.zoom,
                                        bearing: 0,
                                        viewingAngle: 0)
         mapView.camera = camera
@@ -79,46 +101,46 @@ class MapViewController: UIViewController {
     private func setupClusterManager() {
         let iconGenerator = GMUDefaultClusterIconGenerator()
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let defRenderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
-        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: defRenderer)
+        let renderer = GMUDefaultClusterRenderer(mapView: mapView, clusterIconGenerator: iconGenerator)
+        renderer.delegate = self
+        clusterManager = GMUClusterManager(map: mapView, algorithm: algorithm, renderer: renderer)
         clusterManager.setDelegate(self, mapDelegate: self)
     }
     
-    private func checkLocationStatus() {
-        var showCoord = Constants.initialCoordinate
-        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
-            if let loc = viewModel.locationManager.location {
-                showCoord = loc.coordinate
-            }
+    private func setInitialLocation() {
+        var coordinate = viewModel.locationManager.location?.coordinate ?? Constants.initialCoordinate
+        var zoom = Constants.mapViewDefaultZoom
+        
+        if let place = selectedPlace {
+            coordinate = place.position
+            zoom = Constants.maxClusterZoom + 1
+        }
+        
+        if CLLocationManager.locationServicesEnabled()  {
             mapView.isMyLocationEnabled = true
         } else {
             viewModel.locationManager.requestWhenInUseAuthorization()
         }
-        mapView.camera = GMSCameraPosition(target: showCoord,
-                                           zoom: Constants.mapViewDefaultZoom,
-                                           bearing: 0,
-                                           viewingAngle: 0)
-    }
-    
-    fileprivate func centrateMarker(_ marker: Place) {
-        let mapZoom = mapView.camera.zoom > Constants.maxClusterZoom ? mapView.camera.zoom : Constants.maxClusterZoom + 1
-        mapView.camera = GMSCameraPosition(target: marker.position,
-                                           zoom: mapZoom,
-                                           bearing: 0,
-                                           viewingAngle: 0)
+        let cameraPos = GMSCameraPosition(target: coordinate,
+                                          zoom: zoom,
+                                          bearing: 0,
+                                          viewingAngle: 0)
+        mapView.camera = cameraPos
     }
     
 
-    private func addPlaceMarker(_ marker: PlaceMarker) {
+    private func addPlaceItem(_ placeItem: PlaceClusterItem) {
         DispatchQueue.main.async { [weak self] in
-            marker.map = self?.mapView
+            self?.clusterManager.add(placeItem)
+            self?.clusterManager.cluster()
         }
     }
     
     
-    private func removePlaceMarker(_ marker: PlaceMarker) {
-        DispatchQueue.main.async {
-            marker.map = nil
+    private func removePlaceItem(_ placeItem: PlaceClusterItem) {
+        DispatchQueue.main.async { [weak self] in
+            self?.clusterManager.remove(placeItem)
+            self?.clusterManager.cluster()
         }
     }
     
@@ -126,7 +148,7 @@ class MapViewController: UIViewController {
         AlertsManager.showAlertAddNewPlace(to: self, okCompletion: { [weak self] placeName in
             var name = placeName
             if placeName.isEmpty {
-                let count = (self?.viewModel.placeMarkers.count ?? 0) + 1
+                let count = (self?.viewModel.placeItems.count ?? 0) + 1
                 name = "Place \(count)"
             }
             
@@ -135,14 +157,21 @@ class MapViewController: UIViewController {
         })
     }
     
+    private func setSelectedMarker(_ marker: GMSMarker, delay: TimeInterval) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: { [weak self] in
+            self?.mapView.selectedMarker = marker
+        })
+    }
+    
 }
 
 extension MapViewController {
-    private struct Constants {
+    struct Constants {
         static let initialCoordinate = CLLocationCoordinate2DMake(50.450648, 30.523117)
         static let mapViewDefaultZoom: Float = 6
         static let maxRadius = 30_000
-        static let maxClusterZoom: Float = 1
+        static let maxClusterZoom: Float = 10
+        static let selectedMarkerDelay: TimeInterval = 0.5
     }
 }
 
@@ -152,15 +181,17 @@ extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         if mapView.selectedMarker == marker {
             mapView.selectedMarker = nil
+            selectedItem = nil
         } else {
             mapView.selectedMarker = marker
         }
-        
+
         return true
     }
     
     func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
         mapView.selectedMarker = nil
+        selectedItem = nil
     }
     
     func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
@@ -177,6 +208,26 @@ extension MapViewController: GMUClusterManagerDelegate {
         let update = GMSCameraUpdate.setCamera(newCamera)
         mapView.moveCamera(update)
         return true
+    }
+
+    
+}
+
+
+extension MapViewController: GMUClusterRendererDelegate {
+    
+    func renderer(_ renderer: GMUClusterRenderer, markerFor object: Any) -> GMSMarker? {
+        switch object {
+        case let clusterItem as PlaceClusterItem:
+            let marker = PlaceMarker(clusterItem.place)
+            if clusterItem.place.id == selectedItem?.place.id {
+                setSelectedMarker(marker, delay: Constants.selectedMarkerDelay)
+            }
+            return marker
+            
+        default:
+            return nil
+        }
     }
     
 }

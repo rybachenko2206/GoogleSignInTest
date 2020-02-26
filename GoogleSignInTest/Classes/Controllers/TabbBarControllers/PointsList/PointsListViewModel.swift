@@ -42,25 +42,6 @@ class PointsListViewModel {
     
     // MARK: - Private funcs
     private func observeReference() {
-        //        ref?.observe(.childAdded, with: { value in
-        //            pl(".childAdded snapshot in \n\(value)")
-        ////            DispatchQueue.main.async { [weak self] in
-        ////                if let newPlace = value as? Place {
-        ////                    self?.places.append(newPlace)
-        ////                }
-        ////
-        ////            }
-        //        }, withCancel: { error in
-        //            pl(".childAdded event error:\n\(error)")
-        //        })
-        //
-        //        ref?.observe(.childRemoved, with: { [weak self] snapshot in
-        //            pl(".childRemoved snapshot in \n\(snapshot)")
-        //
-        //            }, withCancel: { error in
-        //                pl(".childRemoved event error:\n\(error)")
-        //        })
-        
         ref?.observe(.value, with: { [weak self] snapshot in
             pl(snapshot)
             var newItems: [Place] = []
@@ -73,7 +54,7 @@ class PointsListViewModel {
                 }
             }
             
-            self?.places = newItems.sorted(by: { $0.name > $1.name })
+            self?.places = newItems.sorted(by: { $0.name < $1.name })
             self?.placesReceived?()
             
             }, withCancel: { [weak self] error in

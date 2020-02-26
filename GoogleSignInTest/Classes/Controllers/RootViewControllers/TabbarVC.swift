@@ -10,11 +10,16 @@ import UIKit
 
 class TabbarVC: UITabBarController, Storyboardable {
     
+    enum TabbarItems: Int {
+        case points, map, profile
+    }
+    
     static var storyboardName: Storyboard {
         return .tabbar
     }
     
     var userDidSignOut: (() -> Void)?
+    
     
 
 }

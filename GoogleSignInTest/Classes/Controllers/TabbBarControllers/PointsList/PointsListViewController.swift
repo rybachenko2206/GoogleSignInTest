@@ -81,6 +81,18 @@ class PointsListViewController: UIViewController {
         self.present(ac, animated: true, completion: nil)
     }
     
+    private func openMap(with place: Place) {
+        guard let mySceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate,
+            let navController = mySceneDelegate.window?.rootViewController as? UINavigationController,
+            let tabbarVc = navController.viewControllers.first as? TabbarVC,
+            let mapNavController = tabbarVc.viewControllers?[safe: TabbarVC.TabbarItems.map.rawValue] as? UINavigationController,
+            let mapVc = mapNavController.viewControllers.first as? MapViewController
+            else { return }
+        
+        mapVc.showPlace(place)
+        tabbarVc.selectedIndex = TabbarVC.TabbarItems.map.rawValue
+    }
+    
 }
 
 
@@ -110,7 +122,9 @@ extension PointsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        // TODO: move to mapView at location..
+        
+        guard let place = viewModel.places[safe: indexPath.row] else { return }
+        openMap(with: place)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
